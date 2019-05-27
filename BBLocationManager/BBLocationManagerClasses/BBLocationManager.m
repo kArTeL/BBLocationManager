@@ -360,16 +360,16 @@ typedef enum : NSUInteger {
 {
 
     /*------------------first check if we already have these coordinates inside existing regions----------*/
-    CLCircularRegion *currentRegion = [self isFenceExistsForCoordinates:location.coordinate];
-    if(currentRegion != nil)
-    {
-        NSLog(@"[BBLocationManager] Fence already exist for area: %@ ---- inside: %@", identifier, currentRegion.identifier);
-        if([self.delegate respondsToSelector:@selector(BBLocationManagerDidAddFence:)])
-        {
-            [self.delegate BBLocationManagerDidAddFence:[self fenceInfoForRegion:currentRegion fenceEventType:BBFenceEventTypeRepeated]];
-        }
-        return;
-    }
+//    CLCircularRegion *currentRegion = [self isFenceExistsForCoordinates:location.coordinate];
+//    if(currentRegion != nil)
+//    {
+//        NSLog(@"[BBLocationManager] Fence already exist for area: %@ ---- inside: %@", identifier, currentRegion.identifier);
+//        if([self.delegate respondsToSelector:@selector(BBLocationManagerDidAddFence:)])
+//        {
+//            [self.delegate BBLocationManagerDidAddFence:[self fenceInfoForRegion:currentRegion fenceEventType:BBFenceEventTypeRepeated]];
+//        }
+//        return;
+//    }
     
     
     /*------------------if this coordinates doesnot already added to a geofence, start the fence---------------------*/
