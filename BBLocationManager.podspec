@@ -7,11 +7,11 @@ Pod::Spec.new do |s|
                    DESC
 
   s.summary  = 'A Location Manager for easily implementing location services & geofencing in iOS'
-  s.homepage = 'https://github.com/benzamin/BBLocationManager'
+  s.homepage = 'https://github.com/kartel/BBLocationManager'
   s.screenshots  = "https://raw.githubusercontent.com/benzamin/BBLocationManager/master/screens/locationNgeofence.gif"
   s.social_media_url = 'http://twitter.com/benzamin1985'
   s.authors  = { 'Benzamin Basher' => 'benzamin1985@gmail.com' }
-  s.source   = { :git => 'https://github.com/benzamin/BBLocationManager.git', :tag => s.version }
+  s.source   = { :git => 'https://github.com/kartel/BBLocationManager.git', :tag => s.version }
   s.requires_arc = true
   
   s.public_header_files = 'BBLocationManager/BBLocationManagerClasses/BBLocationManager.h'
