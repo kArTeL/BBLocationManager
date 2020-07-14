@@ -530,35 +530,35 @@ typedef enum : NSUInteger {
 - (void)startUpdatingLocation
 {
     [self getPermissionForStartUpdatingLocation];
-    if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysUsageDescription"] || [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysAndWhenInUseUsageDescription"]) {
-        if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIBackgroundModes"])
-        {
-            BOOL hasLocationBackgroundMode = NO;
-            NSArray *bgmodesArray = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIBackgroundModes"];
-            for(NSString *str in bgmodesArray)
-            {
-                if([str isEqualToString:@"location"])
-                {
-                    hasLocationBackgroundMode = YES;
-                    break;
-                }
-            }
-            if(!hasLocationBackgroundMode)
-            {
-                [[NSException exceptionWithName:@"[BBLocationManager] UIBackgroundModes not enabled" reason:@"Your apps info.plist does not contain 'UIBackgroundModes' key with a 'location' string in it, which is required for background location access 'NSLocationAlwaysAndWhenInUseUsageDescription' for iOS 11 or 'NSLocationAlwaysUsageDescription' for iOS 10" userInfo:nil] raise];
-            }
-            else{
-                if ([self.locationManager respondsToSelector:@selector(setAllowsBackgroundLocationUpdates:)])
-                {
-                    [self.locationManager setAllowsBackgroundLocationUpdates:YES];
-                }
-            }
-        }
-        else{
-            [[NSException exceptionWithName:@"[BBLocationManager] UIBackgroundModes not enabled" reason:@"Your apps info.plist does not contain 'UIBackgroundModes' key with a 'location' string in it, which is required for background location access 'NSLocationAlwaysAndWhenInUseUsageDescription' for iOS 11 or 'NSLocationAlwaysUsageDescription' for iOS 10" userInfo:nil] raise];
-        }
-
-    }
+//    if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysUsageDescription"] || [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysAndWhenInUseUsageDescription"]) {
+//        if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIBackgroundModes"])
+//        {
+//            BOOL hasLocationBackgroundMode = NO;
+//            NSArray *bgmodesArray = [[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIBackgroundModes"];
+//            for(NSString *str in bgmodesArray)
+//            {
+//                if([str isEqualToString:@"location"])
+//                {
+//                    hasLocationBackgroundMode = YES;
+//                    break;
+//                }
+//            }
+//            if(!hasLocationBackgroundMode)
+//            {
+//                [[NSException exceptionWithName:@"[BBLocationManager] UIBackgroundModes not enabled" reason:@"Your apps info.plist does not contain 'UIBackgroundModes' key with a 'location' string in it, which is required for background location access 'NSLocationAlwaysAndWhenInUseUsageDescription' for iOS 11 or 'NSLocationAlwaysUsageDescription' for iOS 10" userInfo:nil] raise];
+//            }
+//            else{
+//                if ([self.locationManager respondsToSelector:@selector(setAllowsBackgroundLocationUpdates:)])
+//                {
+//                    [self.locationManager setAllowsBackgroundLocationUpdates:YES];
+//                }
+//            }
+//        }
+//        else{
+//            [[NSException exceptionWithName:@"[BBLocationManager] UIBackgroundModes not enabled" reason:@"Your apps info.plist does not contain 'UIBackgroundModes' key with a 'location' string in it, which is required for background location access 'NSLocationAlwaysAndWhenInUseUsageDescription' for iOS 11 or 'NSLocationAlwaysUsageDescription' for iOS 10" userInfo:nil] raise];
+//        }
+//
+//    }
     
     if(self.activeLocationTaskType == LocationTaskTypeGetSignificantChangeLocation)
     {
