@@ -529,7 +529,7 @@ typedef enum : NSUInteger {
 
 - (void)startUpdatingLocation
 {
-    [self getPermissionForStartUpdatingLocation];
+   // [self getPermissionForStartUpdatingLocation];
 //    if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysUsageDescription"] || [[NSBundle mainBundle] objectForInfoDictionaryKey:@"NSLocationAlwaysAndWhenInUseUsageDescription"]) {
 //        if ([[NSBundle mainBundle] objectForInfoDictionaryKey:@"UIBackgroundModes"])
 //        {
