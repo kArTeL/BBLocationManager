@@ -139,7 +139,7 @@ typedef enum : NSUInteger {
                                                                delegate:self
                                                       cancelButtonTitle:@"Cancel"
                                                       otherButtonTitles:@"Settings", nil];
-            [alertView show];
+          //  [alertView show];
         }
     }
     //before iOS 8, no permission was needed to access location
@@ -170,7 +170,7 @@ typedef enum : NSUInteger {
                                                                delegate:self
                                                       cancelButtonTitle:@"Cancel"
                                                       otherButtonTitles:@"Settings", nil];
-            [alertView show];
+           // [alertView show];
         }
     }
 
